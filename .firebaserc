@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-77363": {
+      "hosting": {
+        "project": [
+          "project-77363"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-77363"
+  }
+}
