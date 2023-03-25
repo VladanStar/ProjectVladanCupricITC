@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MainComponent } from './components/main/main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
