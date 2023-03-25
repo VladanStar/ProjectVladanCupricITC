@@ -1,4 +1,10 @@
-.dr{
-    margin-top: 25%;
-    height: 100vh;
-    }
+.dr {
+  margin-top: 25%;
+  height: 80vh;
+}
+.container {
+  background-image: url("https://wallpaperaccess.com/full/1875475.jpg") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}

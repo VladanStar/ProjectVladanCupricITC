@@ -10,6 +10,12 @@ export class AuthService  implements OnInit{
   [x: string]: any;
 
   constructor(private fireauth : AngularFireAuth, private router : Router) { }
+
+  isLoggedIn:boolean = false;
+
+  updateLoginStatus(status: boolean) {
+    this.isLoggedIn = status;
+  }
 ngOnInit(): void {
 
 }
@@ -18,9 +24,9 @@ login(email : string, password : string) {
       localStorage.setItem('token','true');
 
       if(res.user?.emailVerified == true) {
-        this.router.navigate(['main']);
+        this.router.navigate(['/main']);
       } else {
-        this.router.navigate(['/verify-email']);
+        this.router.navigate(['/main']);
       }
 
   }, err => {
