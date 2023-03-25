@@ -11,6 +11,7 @@ import { MainComponent } from './components/main/main.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RegisterComponent } from './components/register/register.component';
     FooterComponent,
     MainComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
