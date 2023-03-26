@@ -19,6 +19,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

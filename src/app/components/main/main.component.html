@@ -18,7 +18,7 @@
                     <h1 class="text-center">{{task.naziv}}</h1>
                     <p> Status: {{ task.uradjen}}</p>
                     <p>Hitnost: {{task.hitan}}</p>
-                    <p>Datum :{{task.datum}}</p>
+                    <p>Datum :{{task.datum  | date:'dd.MM.yyyy.' }}</p>
   
                   
   
@@ -26,6 +26,11 @@
                     <br />
   
                 </div>
+                <label for="nesto">Done</label>
+                <!-- <input type="checkbox" id="nesto" name="vehicle1" value="Done"/> -->
+                <input type="checkbox" [checked]="task.checked" (change)="task.checked = !task.checked" class="car">
+
+
   
             </div>
             <pagination-controls class="text-center pag my-5" (pageChange)="page = $event"></pagination-controls>

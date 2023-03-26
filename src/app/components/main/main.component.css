@@ -39,6 +39,9 @@ body {
     width: 70%;
     margin: auto;
   }
+  .car:checked + .playerbox h1 {
+    color: red !important;
+  }
   .playerbox h1 {
     font-size: 28px;
     margin-top: 10px;

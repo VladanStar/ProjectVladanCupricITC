@@ -3,6 +3,8 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Task } from 'src/app/models/task';
 import { TaskService } from 'src/app/services/task.service';
 
+
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -50,13 +52,8 @@ export class MainComponent implements OnInit {
     });
   }
 
+  // }
   sortDatum() {
-    this.tasks.sort((a: Task, b: Task): any => {
-      if (a.datum && b.datum) {
-        return a.datum.getTime() - b.datum.getTime();
-      } else {
-        return 0;
-      }
-    });
+ 
   }
 }
