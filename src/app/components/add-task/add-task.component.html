@@ -1,1 +1,49 @@
-<p>add-task works!</p>
+<form #f="ngForm" (ngSubmit)="addTask(f)">
+    <div class="mb-3">
+      <label for="naziv">Naziv</label>
+      <input
+      title="#"
+      ngModel
+      type="text"
+      id="naziv"
+      #naziv="ngModel"
+      name="naziv"
+      class="form-control"
+      required
+      [ngClass]="{ 'is-invalid': naziv.invalid && naziv.touched }"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="uradjen">Uradjen</label>
+      <input
+      title="#"
+      ngModel
+      type="text"
+      id="uradjen"
+      #uradjen="ngModel"
+      name="uradjen"
+      class="form-control"
+      required
+      [ngClass]="{ 'is-invalid': uradjen.invalid && uradjen.touched }"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="hitan">hitan</label>
+      <input
+      title="#"
+      ngModel
+      type="text"
+      id="hitan"
+      #hitan="ngModel"
+      name="hitan"
+      class="form-control"
+      required
+      [ngClass]="{ 'is-invalid': hitan.invalid && hitan.touched }"
+      />
+    </div>
+   
+    
+  
+  
+    <button class="btn btn-success" type="submit">Edit Task</button>
+  </form>
