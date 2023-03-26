@@ -27,6 +27,22 @@
       [ngClass]="{ 'is-invalid': uradjen.invalid && uradjen.touched }"
       />
     </div>
+
+    <div class="mb-3">
+        <label for="datum">Datum</label>
+        <input
+        title="#"
+        ngModel
+        type="date"
+        id="datum"
+        #datum="ngModel"
+        name="datum"
+        class="form-control"
+        required
+        [ngClass]="{ 'is-invalid': datum.invalid && datum.touched }"
+        />
+      </div>
+
     <div class="mb-3">
       <label for="hitan">hitan</label>
       <input

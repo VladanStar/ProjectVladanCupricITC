@@ -49,4 +49,7 @@ export class MainComponent implements OnInit {
       }
     });
   }
+  sortDatum(){
+    
+  }
 }
