@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Task } from 'src/app/models/task';
 import { TaskService } from 'src/app/services/task.service';
@@ -10,6 +10,7 @@ import { TaskService } from 'src/app/services/task.service';
   styleUrls: ['./edit-task.component.css'],
 })
 export class EditTaskComponent implements OnInit {
+  projectForm!: FormGroup;
   constructor(
     private taskServis: TaskService,
     private route: ActivatedRoute,
@@ -31,6 +32,13 @@ export class EditTaskComponent implements OnInit {
         console.log(this.task);
       });
     }
+    this.projectForm = new FormGroup({
+      'projectName':new FormControl(null, [Validators.required]),
+      'project': new FormControl(null, [Validators.required]),
+      'project1': new FormControl(null, [Validators.required]),
+      'project2': new FormControl(null, [Validators.required]),
+      'project3':new FormControl('drustvo')
+      });
   }
   updateTask(f: NgForm) {
     // console.log(f.value)
