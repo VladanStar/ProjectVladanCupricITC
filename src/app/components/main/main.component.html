@@ -1,18 +1,18 @@
 <div class="container my-5" id="elem">
     <div class="row">
   
-       <input type="text" class=" search form-control border border-primary my-5" placeholder="serach">
+        <input   [(ngModel)]="searchText" type="text" class=" search form-control border border-primary my-5" placeholder="serach">
         <hr>
         <hr>
-        <!-- <button class="add-button" routerLink="add" ><i class="bi bi-person-fill-add">ADD</i></button>  -->
+
         <button class="btn btn-warning" type="button" (click)="sortIme()">Sortiraj po Imenu</button>
-        <!-- <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po Poziciji</button>
-        <button class="btn btn-warning" type="button" (click)="sortTim()">Sortiraj po Timui</button>
-            <button class="btn btn-warning" type="button" (click)="sortBroj()">Sortiraj po Dresu</button> -->
+         <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po ID</button>
+        <button class="btn btn-warning" type="button" (click)="sortHitnost()">Sortiraj po Hitnosti</button>
+        
             <hr>
             <hr>
             <div class="col-lg-4 cardy"
-                *ngFor="let task of tasks;let i = index">
+                *ngFor="let task of tasks  | filter : searchText | paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalLength } ;let i = index">
                 <div class="playerbox mt-3 mb-3">
                   
                     <h1 class="text-center">{{task.naziv}}</h1>
@@ -27,9 +27,9 @@
                 </div>
   
             </div>
-            <!-- <pagination-controls class="text-center pag my-5" (pageChange)="page = $event"></pagination-controls> -->
+            <pagination-controls class="text-center pag my-5" (pageChange)="page = $event"></pagination-controls>
     </div>
    <!-- <button type="button" class="btn btn-danger" (click)="exportToCsv()">Export to CSV</button> -->
     <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button> -->
-    <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button> --> -->
+    <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button> -->
   </div>

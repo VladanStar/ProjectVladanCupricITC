@@ -9,51 +9,44 @@ import { TaskService } from 'src/app/services/task.service';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-
+  totalLength: any;
+  page: number = 1;
+  p: any;
+  searchText:any;
   tasks: Task[] = [];
-  constructor(private auth: AuthService, private taskService:TaskService) {
+  constructor(private auth: AuthService, private taskService: TaskService) {
     this.auth.updateLoginStatus(false);
   }
 
   ngOnInit(): void {
-    this.taskService.getAll().subscribe(p=> this.tasks =p);
-    }
+    this.taskService.getAll().subscribe((p) => (this.tasks = p));
+  }
 
-    
-sortIme(): void {
-  this.tasks.sort((a: Task, b: Task): number => {
-    if (a.naziv && b.naziv) {
-      return a.naziv.localeCompare(b.naziv);
-    } else {
-      return 0;
-    }
-  });
-}
-// sortTim(): void {
-//   this.players.sort((a: Player, b: Player): number => {
-//     if (a.tim && b.tim) {
-//       return a.tim.localeCompare(b.tim);
-//     } else {
-//       return 0;
-//     }
-//   });
-// }
-// sortPozicija(): void {
-//   this.players.sort((a: Player, b: Player): number => {
-//     if (a.pozicija && b.pozicija) {
-//       return a.pozicija.localeCompare(b.pozicija);
-//     } else {
-//       return 0;
-//     }
-//   });
-// }
-// sortBroj() {
-//   this.players.sort((a: Player, b: Player): number => {
-//     if (a.broj_dresa && b.broj_dresa) {
-//       return a.broj_dresa - b.broj_dresa;
-//     } else {
-//       return 0;
-//     }
-//   });
-// }
+  sortIme(): void {
+    this.tasks.sort((a: Task, b: Task): number => {
+      if (a.naziv && b.naziv) {
+        return a.naziv.localeCompare(b.naziv);
+      } else {
+        return 0;
+      }
+    });
+  }
+  sortHitnost(): void {
+    this.tasks.sort((a: Task, b: Task): number => {
+      if (a.hitan && b.hitan) {
+        return a.hitan.localeCompare(b.hitan);
+      } else {
+        return 0;
+      }
+    });
+  }
+  sortPozicija(): void {
+    this.tasks.sort((a: Task, b: Task): number => {
+      if (a.id && b.id) {
+        return a.id.localeCompare(b.id);
+      } else {
+        return 0;
+      }
+    });
+  }
 }

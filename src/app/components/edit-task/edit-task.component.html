@@ -1,19 +1,35 @@
-
 <form #f="ngForm" (ngSubmit)="updateTask(f)">
+  <div class="mb-3">
+    <label for="naziv">Naziv</label>
+    <input
+      title="#f"
+      [(ngModel)]="task.naziv"
+      type="text"
+      id="naziv"
+      name="naziv"
+      class="form-control"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="uradjen">Uradjen</label>
+    <input
+      [(ngModel)]="task.uradjen"
+      type="text"
+      name="uradjen"
+      id="uradjen"
+      class="form-control"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="hitan">Hitan</label>
+    <input
+      [(ngModel)]="task.hitan"
+      type="text"
+      id="hitan"
+      name="hitan"
+      class="form-control"
+    />
+  </div>
 
-    <div class="mb-3">
-  <label for="naziv">Naziv</label>
-  <input  title="#f" [(ngModel)]="task.naziv" type="text" id="naziv" name="naziv" class="form-control" >
-    </div>
-    <div class="mb-3">
-        <label for="uradjen">Uradjen</label>
-        <input  [(ngModel)]="task.uradjen" type="text" name="uradjen" id="uradjen" class="form-control" >
-    </div>
-    <div class="mb-3">
-        <label for="hitan">Hitan</label>
-        <input  [(ngModel)]="task.hitan" type="text" id="hitan" name="hitan" class="form-control">
-    </div>
-   
-  
-   <button class="btn btn-success" type="submit">Edit task</button>
-  </form>
+  <button class="btn btn-success" type="submit">Edit task</button>
+</form>

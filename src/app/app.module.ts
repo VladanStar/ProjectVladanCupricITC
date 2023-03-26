@@ -14,6 +14,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { EditTaskComponent } from './components/edit-task/edit-task.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
     FormsModule,
    AngularFireModule.initializeApp(environment.firebase)
   ],
