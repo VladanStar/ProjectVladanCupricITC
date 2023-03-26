@@ -19,6 +19,7 @@ export class EditTaskComponent implements OnInit{
       naziv:"",
        hitan:"",
        uradjen:"",
+       datum:new Date,
       
    
    };

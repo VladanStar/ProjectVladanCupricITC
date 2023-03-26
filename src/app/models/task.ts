@@ -3,4 +3,5 @@ export interface Task {
     naziv?:string;
     hitan?:string;
     uradjen?:string;
+    datum?:Date;
 }
