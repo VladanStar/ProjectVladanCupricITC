@@ -4,9 +4,9 @@
        <input type="text" class=" search form-control border border-primary my-5" placeholder="serach">
         <hr>
         <hr>
-        <!-- <button class="add-button" routerLink="add" ><i class="bi bi-person-fill-add">ADD</i></button> -->
-        <!-- <button class="btn btn-warning" type="button" (click)="sortIme()">Sortiraj po Imenu</button>
-        <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po Poziciji</button>
+        <!-- <button class="add-button" routerLink="add" ><i class="bi bi-person-fill-add">ADD</i></button>  -->
+        <button class="btn btn-warning" type="button" (click)="sortIme()">Sortiraj po Imenu</button>
+        <!-- <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po Poziciji</button>
         <button class="btn btn-warning" type="button" (click)="sortTim()">Sortiraj po Timui</button>
             <button class="btn btn-warning" type="button" (click)="sortBroj()">Sortiraj po Dresu</button> -->
             <hr>
@@ -15,7 +15,7 @@
                 *ngFor="let task of tasks;let i = index">
                 <div class="playerbox mt-3 mb-3">
                   
-                    <h2>Naziv: {{task.naziv}}</h2>
+                    <h1 class="text-center">{{task.naziv}}</h1>
                     <p> Status: {{ task.uradjen}}</p>
                     <p>Hitnost: {{task.hitan}}</p>
   

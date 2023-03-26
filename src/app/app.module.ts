@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     MainComponent,
     LoginComponent,
     RegisterComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,

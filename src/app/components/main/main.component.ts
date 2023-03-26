@@ -18,4 +18,42 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.taskService.getAll().subscribe(p=> this.tasks =p);
     }
+
+    
+sortIme(): void {
+  this.tasks.sort((a: Task, b: Task): number => {
+    if (a.naziv && b.naziv) {
+      return a.naziv.localeCompare(b.naziv);
+    } else {
+      return 0;
+    }
+  });
+}
+// sortTim(): void {
+//   this.players.sort((a: Player, b: Player): number => {
+//     if (a.tim && b.tim) {
+//       return a.tim.localeCompare(b.tim);
+//     } else {
+//       return 0;
+//     }
+//   });
+// }
+// sortPozicija(): void {
+//   this.players.sort((a: Player, b: Player): number => {
+//     if (a.pozicija && b.pozicija) {
+//       return a.pozicija.localeCompare(b.pozicija);
+//     } else {
+//       return 0;
+//     }
+//   });
+// }
+// sortBroj() {
+//   this.players.sort((a: Player, b: Player): number => {
+//     if (a.broj_dresa && b.broj_dresa) {
+//       return a.broj_dresa - b.broj_dresa;
+//     } else {
+//       return 0;
+//     }
+//   });
+// }
 }
