@@ -65,4 +65,7 @@ export class MainComponent implements OnInit {
     const sortedTasks = Object.values(this.tasks).sort((a:any, b:any) => a.datum - b.datum);
     
   }
+  sortPriroda(){
+    
+  }
 }
