@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
   totalLength: any;
   page: number = 1;
   p: any;
-  searchText:any;
+  searchText: any;
   tasks: Task[] = [];
   constructor(private auth: AuthService, private taskService: TaskService) {
     this.auth.updateLoginStatus(false);
@@ -49,7 +49,14 @@ export class MainComponent implements OnInit {
       }
     });
   }
-   sortDatum():void {
-   
+
+  sortDatum() {
+    this.tasks.sort((a: Task, b: Task): any => {
+      if (a.datum && b.datum) {
+        return a.datum.getTime() - b.datum.getTime();
+      } else {
+        return 0;
+      }
+    });
   }
 }
