@@ -27,6 +27,13 @@ task:Task={}
   }
 
   deleteTask(){
-
+    let id = this.id as string;
+    if(confirm("Da li ste sigurni?")){
+      if(id){
+    this.taskServis.delete(this.id);
+    this.router.navigate(["main"])
+  
+    }
+  }
   }
 }

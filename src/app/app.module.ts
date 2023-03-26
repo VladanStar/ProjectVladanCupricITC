@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TaskDetailComponent } from './components/task-detail/task-detail.compon
     LoginComponent,
     RegisterComponent,
     VerifyEmailComponent,
-    TaskDetailComponent
+    TaskDetailComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,
