@@ -1,3 +1,70 @@
-.container {
+body {
     height: 100vh;
-}
+    background: linear-gradient(to top, #d20303 35%, #600606 65%) !important;
+  }
+  
+  .playerbox {
+    margin-top: 15px;
+    padding: 5px 5px;
+    /* border: 2px solid var(--primary-color); */
+    height: 16rem;
+    /* box-shadow: 2px 2px 2px; */
+    position: relative;
+    font-size: 14px;
+  
+  
+  }
+  .form-control {
+    margin: auto;
+  }
+  .playerbox img {
+    width: 30%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid red;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  .cardy {
+    background: linear-gradient(to top, #f15a5a 35%, #c02828 65%) !important;
+    border-radius: 10%;
+    margin:10px auto;
+    width: 30%;
+    /* margin: auto; */
+  
+  }
+  .search {
+    width: 70%;
+    margin: auto;
+  }
+  .playerbox h1 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  /* .buybtn {
+      color: #000;
+      background-color: coral;
+      padding: 7px 7px;
+      text-decoration: none;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      bottom: 3rem;
+    } */
+  
+  input {
+    border: 2px solid var(--primary-color);
+    margin: 15px;
+  }
+  
+  .btn {
+    width: 20%;
+    margin: auto;
+  }
+  .pag {
+    color: whitesmoke;
+  }

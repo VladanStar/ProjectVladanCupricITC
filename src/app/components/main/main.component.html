@@ -1,5 +1,35 @@
-<div class="container">
+<div class="container my-5" id="elem">
     <div class="row">
-        
+  
+       <input type="text" class=" search form-control border border-primary my-5" placeholder="serach">
+        <hr>
+        <hr>
+        <!-- <button class="add-button" routerLink="add" ><i class="bi bi-person-fill-add">ADD</i></button> -->
+        <!-- <button class="btn btn-warning" type="button" (click)="sortIme()">Sortiraj po Imenu</button>
+        <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po Poziciji</button>
+        <button class="btn btn-warning" type="button" (click)="sortTim()">Sortiraj po Timui</button>
+            <button class="btn btn-warning" type="button" (click)="sortBroj()">Sortiraj po Dresu</button> -->
+            <hr>
+            <hr>
+            <div class="col-lg-4 cardy"
+                *ngFor="let task of tasks;let i = index">
+                <div class="playerbox mt-3 mb-3">
+                  
+                    <h2>Naziv: {{task.naziv}}</h2>
+                    <p> Status: {{ task.uradjen}}</p>
+                    <p>Hitnost: {{task.hitan}}</p>
+  
+                  
+  
+                    <p> <a class="btn btn-warning my-4" routerLink="task/{{task.id}}">Details</a></p>
+                    <br />
+  
+                </div>
+  
+            </div>
+            <!-- <pagination-controls class="text-center pag my-5" (pageChange)="page = $event"></pagination-controls> -->
     </div>
-</div>
+   <!-- <button type="button" class="btn btn-danger" (click)="exportToCsv()">Export to CSV</button> -->
+    <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button> -->
+    <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button> --> -->
+  </div>

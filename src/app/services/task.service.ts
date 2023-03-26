@@ -13,7 +13,7 @@ export class TaskService {
   
   getAll(): Observable<Task[]> {
     return this.db
-      .list<Task>('/tasks')
+      .list<Task>('/taks')
       .snapshotChanges()
       .pipe(
         map((x) =>
@@ -26,7 +26,7 @@ export class TaskService {
   }
   get(id: string): Observable<Task> {
     return this.db
-      .object<Task>('/tasks/' + id)
+      .object<Task>('/taks/' + id)
       .snapshotChanges()
       .pipe(
         map((x: any) => ({
@@ -36,12 +36,12 @@ export class TaskService {
       );
   }
   update(taskId: string, Task: Task): void {
-    this.db.object<Task>('/tasks/' + taskId).update(Task);
+    this.db.object<Task>('/taks/' + taskId).update(Task);
   }
   add(Task: Task) {
-    this.db.list('/tasks').push(Task);
+    this.db.list('/taks').push(Task);
   }
   delete(taskId: any) {
-    this.db.object<Task>('/tasks/' + taskId).remove();
+    this.db.object<Task>('/taks/' + taskId).remove();
   }
 }
