@@ -15,14 +15,12 @@ export class EditTaskComponent implements OnInit{
     private router:Router){}
     id:any;
     task:Task = {
-   
-      naziv:"",
-       hitan:"",
-       uradjen:"",
-       datum:new Date,
-      
-   
-   };
+      naziv: "",
+      hitan: "",
+      uradjen: "",
+      datum: new Date,
+     
+    };
    ngOnInit(): void {
     this.id= this.route.snapshot.paramMap.get("id")
     if(this.id){
