@@ -11,7 +11,9 @@ import { TaskService } from 'src/app/services/task.service';
 export class TaskDetailComponent implements OnInit {
 
   id:any;
-task:Task={}
+task:Task={
+  category: ''
+}
   constructor(private taskServis:TaskService, private route:ActivatedRoute,
     private router:Router){}
   ngOnInit(): void {

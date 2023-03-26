@@ -57,6 +57,20 @@
       [ngClass]="{ 'is-invalid': hitan.invalid && hitan.touched }"
       />
     </div>
+    <div class="mb-3">
+        <label for="category">Kategorija</label>
+        <input
+        title="#"
+        ngModel
+        type="text"
+        id="category"
+        #category="ngModel"
+        name="category"
+        class="form-control"
+        required
+        [ngClass]="{ 'is-invalid': category.invalid && category.touched }"
+        />
+      </div>
    
     
   

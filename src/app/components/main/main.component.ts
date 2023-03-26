@@ -44,8 +44,8 @@ export class MainComponent implements OnInit {
   }
   sortPozicija(): void {
     this.tasks.sort((a: Task, b: Task): number => {
-      if (a.id && b.id) {
-        return a.id.localeCompare(b.id);
+      if (a.category && b.category) {
+        return a.category.localeCompare(b.category);
       } else {
         return 0;
       }

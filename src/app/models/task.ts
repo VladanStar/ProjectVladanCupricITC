@@ -5,4 +5,5 @@ export interface Task {
     hitan?:string;
     uradjen?:string;
     datum?:Date;
+    category:string;
 }

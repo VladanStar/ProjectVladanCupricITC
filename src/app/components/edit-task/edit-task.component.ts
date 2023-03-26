@@ -7,39 +7,37 @@ import { TaskService } from 'src/app/services/task.service';
 @Component({
   selector: 'app-edit-task',
   templateUrl: './edit-task.component.html',
-  styleUrls: ['./edit-task.component.css']
+  styleUrls: ['./edit-task.component.css'],
 })
-export class EditTaskComponent implements OnInit{
-  constructor(private taskServis:TaskService,
-    private route:ActivatedRoute,
-    private router:Router){}
-    id:any;
-    task:Task = {
-      naziv: "",
-      hitan: "",
-      uradjen: "",
-      datum: new Date,
-     
-    };
-   ngOnInit(): void {
-    this.id= this.route.snapshot.paramMap.get("id")
-    if(this.id){
-  
-  
-    this.taskServis.get(this.id).subscribe(p => {
-     this.task = p;
-     console.log(this.task);
-   });
+export class EditTaskComponent implements OnInit {
+  constructor(
+    private taskServis: TaskService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+  id: any;
+  task: Task = {
+    naziv: '',
+    hitan: '',
+    uradjen: '',
+    datum: new Date(),
+    category: '',
+  };
+  ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id) {
+      this.taskServis.get(this.id).subscribe((p) => {
+        this.task = p;
+        console.log(this.task);
+      });
+    }
   }
-  }
-  updateTask(f:NgForm){
+  updateTask(f: NgForm) {
     // console.log(f.value)
-     let id =this.id as string;
+    let id = this.id as string;
     this.taskServis.update(id, f.value);
-    window.alert('Task je editovan')
-    this.router.navigate(["main"])
+    window.alert('Task je editovan');
+    this.router.navigate(['main']);
     // f.reset();
-      }
-   
-   
+  }
 }

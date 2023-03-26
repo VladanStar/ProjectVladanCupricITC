@@ -6,7 +6,7 @@
         <hr>
 
         <button class="btn btn-warning" type="button" (click)="sortIme()">Sortiraj po Imenu</button>
-         <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po ID</button>
+         <button class="btn btn-warning" type="button" (click)="sortPozicija()">Sortiraj po Kategoriji</button>
         <button class="btn btn-warning" type="button" (click)="sortHitnost()">Sortiraj po Hitnosti</button>
         <button class="btn btn-warning" type="button" (click)="sortDatum()">Sortiraj po Datumu</button>
             <hr>
@@ -19,6 +19,7 @@
                     <p> Status: {{ task.uradjen}}</p>
                     <p>Hitnost: {{task.hitan}}</p>
                     <p>Datum :{{task.datum  | date:'dd.MM.yyyy.' }}</p>
+                    <p>Categorija: {{task.category}}</p>
   
                     <p> <a class="btn btn-warning my-4" routerLink="task/{{task.id}}">Details</a></p>
                     <br />
