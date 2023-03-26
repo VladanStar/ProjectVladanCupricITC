@@ -16,6 +16,7 @@ import { TaskDetailComponent } from './components/task-detail/task-detail.compon
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RegisterComponent,
     VerifyEmailComponent,
     TaskDetailComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
