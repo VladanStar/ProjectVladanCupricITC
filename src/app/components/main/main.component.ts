@@ -54,6 +54,15 @@ export class MainComponent implements OnInit {
 
   // }
   sortDatum() {
- 
+    for (const taskId in this.tasks) {
+      const task = this.tasks[taskId];
+      if (task.datum) {
+        task.datum = new Date(task.datum);
+      }
+    }
+    
+    // Sortiranje po datumu
+    const sortedTasks = Object.values(this.tasks).sort((a:any, b:any) => a.datum - b.datum);
+    
   }
 }

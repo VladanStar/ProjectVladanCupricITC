@@ -15,7 +15,7 @@
                 *ngFor="let task of tasks  | filter : searchText | paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalLength } ;let i = index">
                 <div class="playerbox mt-3 mb-3">
                   
-                    <h1 class="text-center">{{task.naziv}}</h1>
+                    <h2 class="text-center">{{task.naziv}}</h2>
                     <p> Status: {{ task.uradjen}}</p>
                     <p>Hitnost: {{task.hitan}}</p>
                     <p>Datum :{{task.datum  | date:'dd.MM.yyyy.' }}</p>
